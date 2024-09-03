@@ -15,7 +15,7 @@ Una aplicación web para gestionar recetas de cocina. Permite agregar, editar, e
 
 1. Clona el repositorio:
     ```bash
-    git clone git@github.com:emanuel079/Recipes-Management-App.git
+    git clone git@github.com:emanuel079/ReactRecipesHooks.git
     ```
 
 2. Navega al directorio del proyecto:
