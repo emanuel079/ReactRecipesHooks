@@ -1,0 +1,286 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ec1414;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+  padding-top: 50px;
+  height: 100%;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #232527; /* Color oscuro de fondo */
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #9c7404;
+}
+
+/* Navbar fijado arriba y ajustado al 100% del ancho */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.5rem 2rem;
+  background-color: #000000 !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.navbar-nav .nav-link {  
+  font-size: 18px;
+  margin-right: 12px;
+  margin: auto;
+}
+
+.navbar .form-control {
+  width: 250px;
+  margin-left: 350px;
+  margin-right: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.navbar .btn-outline-light {
+  padding: 0.25rem 0.75rem; /* Ajusta el tamaño del botón de búsqueda */
+  font-size: 0.875rem; /* Reduce el tamaño de la fuente del botón */
+}
+
+.navbar .btn-outline-light:hover {
+ 
+  color: #101111;
+}
+
+.navbar .ms-auto {
+  margin-right: 10rem;
+  margin-left: 5rem; 
+}
+
+.navbar-nav.ms-auto {
+  margin-left: auto;
+  margin-right: 20px; /* Ajusta este valor para mover los enlaces más cerca del borde derecho */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #db9f15 !important; 
+}
+
+/* Contenedor principal */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 6rem; /* Espacio para el navbar */
+  min-height: 100vh; /* Asegura que la altura sea consistente */
+}
+
+/* Estilos adicionales para el contenido de la página */
+.container {
+  max-width: 800px; /* Ancho máximo para centrar el contenido */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 60vh; /* Altura mínima para estabilizar el contenido */
+}
+
+/* Formularios y listas centradas */
+form, ul {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Ajuste de botones para asegurar que no se superpongan */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 5px;
+}
+
+button:hover {
+  border-color: #aa049728;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Estilo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333; /* Fondo gris oscuro */
+  color: white; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.modal-content ul {
+  list-style-position: inside; /* Asegura que los puntos estén dentro del contenedor del texto */
+  padding-left: 0; /* Elimina el padding que podría estar creando espacio adicional */
+  margin-left: 0; /* Elimina el margen a la izquierda */
+}
+
+.modal-content li {
+  margin: 5px 0; /* Añade un pequeño margen entre los elementos de la lista */
+}
+
+/* Estilo de la lista de recetas */
+/* Estilo de la lista de recetas */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+  color: #343a40;
+}
+
+.recipe-card {
+  flex: 1 1 calc(33.33% - 2rem); /* Ajusta para que quepan 3 tarjetas en la fila */
+  max-width: 350px; /* Define un ancho máximo */
+  min-width: 300px; /* Define un ancho mínimo */
+  margin-bottom: 50px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: solid 2px;
+  border-color: #db9f15 !important; 
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.recipe-card .card-body {
+  padding: 1rem;
+  flex: 1; /* Permite que el cuerpo de la tarjeta ocupe el espacio disponible */
+}
+
+.recipe-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-card .card-text {
+  font-size: 1rem;
+  margin-bottom: auto;
+}
+
+.recipe-card .list-group-item {
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.list-group-item {
+  background-color: rgb(16, 16, 16);
+  color: white;
+}
+
+.recipe-card .btn {
+  margin-bottom: 0.25rem; /* Reduce el margen inferior de los botones */
+  font-size: 1rem;
+}
+
+.recipe-card .list-group-item {
+  padding: 0.25rem 0.5rem; /* Reduce el padding de los elementos de la lista para que los botones estén más juntos */
+  border: none;
+}
+/* Centrado del formulario de login/registro */
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.centered-card {
+  width: 22rem;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Estilo para el mensaje de bienvenida */
+.welcome-container {
+  display: flex;
+  justify-content: space-between; /* Mueve el contenido a un lado */
+  align-items: flex-end; /* Mueve el contenido hacia abajo */
+  height: 80vh; /* Ajusta la altura para que se mantenga en la parte inferior */
+  padding: 20px; /* Añade un poco de padding */
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  color: #ffffff; /* Ajusta el color si es necesario */
+  margin-bottom: 20px; /* Añade espacio abajo */
+}
+
+.welcome-image {
+  max-width: 50%;
+  height: auto;
+  opacity: 0.8; /* Ajusta la transparencia si lo deseas */
+  align-self: flex-start; /* Mueve la imagen hacia la parte superior */
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

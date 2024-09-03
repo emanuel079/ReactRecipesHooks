@@ -1,0 +1,34 @@
+/* Estilo para el mensaje de bienvenida */
+.welcome-container {
+  display: flex;
+  justify-content: space-between; /* Mueve el contenido a los lados */
+  align-items: center; /* Centra verticalmente el contenido */
+  height: 70vh; /* Ajusta la altura del contenedor */
+  padding: 20px; /* Añade un poco de padding */
+  margin: 0 auto; /* Centra el contenedor principal */
+}
+
+
+.welcome-container .welcome-text {
+  margin-bottom: 110px;
+  font-size: 35px;
+  color: #db9f15;
+  max-width: 45%; 
+  margin-right: 1rem;
+  
+}
+
+.mensajeInicio{  
+  padding-top: 40px;
+  font-size: 20px;
+  color: #f64040;
+}
+
+.welcome-image {
+  margin-right: 50px;
+  padding-top: 70px;
+  padding-inline-end: auto;
+  max-width: 100%; /* Aumenta el tamaño de la imagen */
+  height: 710px;
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 130%); 
+}
